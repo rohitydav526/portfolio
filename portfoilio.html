@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Yadav - Portfolio</title>
+    <meta name="description" content="Rohit Yadav's student portfolio, education, skills, projects, and contact information.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { color-scheme: light; --paper: #f4f6f2; --ink: #1b2925; --muted: #596860; --line: #dce4dc; --accent: #d65c3b; --green: #28745d; }
+        body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, header a:first-child { font-family: 'Space Grotesk', sans-serif; }
+        header { background: rgba(244,246,242,.92) !important; border-color: var(--line) !important; }
+        [class~="bg-slate-950"] { background-color: var(--paper) !important; }
+        [class~="bg-slate-900"], [class~="bg-slate-900/60"] { background-color: #fff !important; }
+        [class~="bg-slate-900/30"] { background-color: #eaf0e9 !important; }
+        [class~="bg-slate-800"] { background-color: #edf1ec !important; }
+        [class~="text-slate-100"] { color: var(--ink) !important; }
+        [class~="text-slate-300"], [class~="text-slate-400"] { color: var(--muted) !important; }
+        [class~="text-slate-500"] { color: #68756e !important; }
+        [class~="border-slate-800"], [class~="border-slate-800/60"] { border-color: var(--line) !important; }
+        [class~="border-slate-700"] { border-color: #cbd6cc !important; }
+        [class~="text-blue-400"], [class~="text-blue-300"] { color: var(--accent) !important; }
+        [class~="bg-blue-600"] { background-color: var(--accent) !important; }
+        [class~="hover:bg-blue-500"]:hover { background-color: #bc4b2e !important; }
+        [class~="border-blue-500/30"] { border-color: rgba(214,92,59,.4) !important; }
+        [class~="bg-gradient-to-b"] { background: radial-gradient(ellipse at 78% 28%, rgba(40,116,93,.12), transparent 42%), var(--paper) !important; }
+        [class~="rounded-2xl"], [class~="rounded-xl"] { border-radius: 8px !important; }
+        input, textarea { color: var(--ink) !important; }
+        input::placeholder, textarea::placeholder { color: #87928b; }
+        @media (max-width: 767px) {
+            #site-nav:not(.hidden) { display: flex; position: absolute; top: 4rem; left: 0; right: 0; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+            #site-nav a { padding: .65rem 0; }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans leading-relaxed">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">Rohit Yadav</a>
+            <button id="menu-toggle" type="button" class="md:hidden text-slate-300 p-2" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav id="site-nav" class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#education" class="hover:text-blue-400 transition">Education</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
+        <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <!-- Profile Photo Placeholder (Replace src when you have your photo) -->
+            <div class="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl mb-6 bg-emerald-100 flex items-center justify-center">
+                <span class="absolute text-5xl font-bold text-emerald-800" aria-hidden="true">RY</span>
+                <img id="profile-photo" src="profile.jpg" alt="Rohit Yadav" class="relative w-full h-full object-cover" onerror="this.hidden=true">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Hi, I'm <span class="text-blue-400">Rohit Yadav</span></h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-8">I’m a student at Sandip University, building my skills in technology and exploring how thoughtful software can solve real problems.</p>
+            <div class="flex gap-4">
+                <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg shadow-lg transition">Get in Touch</a>
+                <a href="#projects" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium rounded-lg border border-slate-700 transition">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center"><span class="text-blue-400">About</span> Me</h2>
+            <div class="bg-slate-900/60 p-8 rounded-2xl border border-slate-800 shadow-xl space-y-6">
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-400 mb-2">Short Introduction & Educational Background</h3>
+                    <p class="text-slate-300">I’m Rohit Yadav, a student at Sandip University with a strong academic record. I completed Grade 10 at Oriental Academy School and Grade 12 at KMC College, and I’m currently in my third semester.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-400 mb-2">Career Interests</h3>
+                    <p class="text-slate-300">I’m interested in web development, software engineering, and creating useful digital experiences. I’m keen to keep learning, work on practical projects, and grow as a developer.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-400 mb-2">Personal & Professional Attributes</h3>
+                    <p class="text-slate-300">I value curiosity, consistency, and learning by doing. I enjoy exploring technology, taking on new challenges, and collaborating with others.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-6 border-t border-slate-800/60 bg-slate-900/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center"><span class="text-blue-400">Education</span> Journey</h2>
+            <div class="space-y-6">
+                <!-- University -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-md">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-100">Sandip University</h3>
+                        <span class="text-sm font-semibold text-blue-400 bg-blue-950/60 px-3 py-1 rounded-full border border-blue-800/50">Current (3rd Semester)</span>
+                    </div>
+                    <p class="text-slate-400 mb-3">Course / Degree: Undergraduate studies</p>
+                    <p class="text-slate-400 mb-3">Academic year: Current (3rd semester)</p>
+                    <div class="flex gap-4 text-sm text-slate-300">
+                        <span class="bg-slate-800 px-3 py-1 rounded">1st Sem CGPA: 7.0</span>
+                        <span class="bg-slate-800 px-3 py-1 rounded">2nd Sem CGPA: 8.0</span>
+                    </div>
+                </div>
+
+                <!-- 12th Grade -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-md">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-100">KMC College</h3>
+                        <span class="text-sm font-semibold text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-800/50">12th Grade</span>
+                    </div>
+                    <p class="text-slate-400 mb-2">Course: Grade 12 · Academic year: Add year</p>
+                    <p class="text-emerald-400 font-bold">Percentage: 89%</p>
+                </div>
+
+                <!-- 10th Class -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-md">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-100">Oriental Academy School</h3>
+                        <span class="text-sm font-semibold text-indigo-400 bg-indigo-950/60 px-3 py-1 rounded-full border border-indigo-800/50">10th Class</span>
+                    </div>
+                    <p class="text-slate-400 mb-2">Course: Grade 10 · Academic year: Add year</p>
+                    <p class="text-indigo-400 font-bold">Percentage: 90%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Technical <span class="text-blue-400">Skills</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Programming Languages -->
+                <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4"><i class="fa-solid fa-code mr-2"></i>Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-lg text-sm">Add your languages</span>
+                    </div>
+                </div>
+
+                <!-- Web Technologies -->
+                <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4"><i class="fa-solid fa-globe mr-2"></i>Web Technologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-lg text-sm">Add your web technologies</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4"><i class="fa-solid fa-layer-group mr-2"></i>Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-lg text-sm">Add your frameworks</span>
+                    </div>
+                </div>
+
+                <!-- Database Technologies -->
+                <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-lg font-semibold text-blue-400 mb-4"><i class="fa-solid fa-database mr-2"></i>Database Technologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 rounded-lg text-sm">Add your database technologies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 border-t border-slate-800/60 bg-slate-900/30">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured <span class="text-blue-400">Project</span></h2>
+            <div class="grid grid-cols-1 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-100 mb-2">Personal Portfolio Website</h3>
+                        <p class="text-slate-400 text-sm mb-4">A responsive website introducing me, sharing my education and skills, and making it easy to get in touch.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-blue-950 text-blue-300 px-2 py-1 rounded border border-blue-900">HTML5</span>
+                            <span class="text-xs bg-blue-950 text-blue-300 px-2 py-1 rounded border border-blue-900">CSS</span>
+                            <span class="text-xs bg-blue-950 text-blue-300 px-2 py-1 rounded border border-blue-900">JavaScript</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/your-username/portfolio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-medium">
+                        <i class="fa-brands fa-github"></i> GitHub Source Code
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Get in <span class="text-blue-400">Touch</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Links -->
+                <div class="space-y-6">
+                    <p class="text-slate-300">Feel free to reach out to me for collaborations, project inquiries, or just to connect!</p>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="mailto:your-email@example.com" class="flex items-center gap-4 text-slate-300 hover:text-blue-400 transition">
+                                <span class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400"><i class="fa-solid fa-envelope"></i></span>
+                                <span>your-email@example.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-slate-300 hover:text-blue-400 transition">
+                                <span class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400"><i class="fa-brands fa-github"></i></span>
+                                <span>github.com/your-username</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-slate-300 hover:text-blue-400 transition">
+                                <span class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-blue-400"><i class="fa-brands fa-linkedin-in"></i></span>
+                                <span>linkedin.com/in/your-linkedin-profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Optional Contact Form -->
+                <form class="bg-slate-900/60 p-6 rounded-xl border border-slate-800 space-y-4" onsubmit="event.preventDefault(); const data = new FormData(this); const subject = encodeURIComponent('Portfolio message from ' + data.get('name')); const body = encodeURIComponent(data.get('message') + '\n\nFrom: ' + data.get('name') + ' (' + data.get('email') + ')'); window.location.href = 'mailto:your-email@example.com?subject=' + subject + '&body=' + body;">
+                    <h3 class="text-lg font-semibold text-slate-100 mb-2">Send Me a Message</h3>
+                    <div>
+                        <label for="contact-name" class="block text-xs font-medium text-slate-400 mb-1">Your Name</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="contact-email" class="block text-xs font-medium text-slate-400 mb-1">Your Email</label>
+                        <input id="contact-email" name="email" type="email" autocomplete="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="contact-message" class="block text-xs font-medium text-slate-400 mb-1">Message</label>
+                        <textarea id="contact-message" name="message" rows="3" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-100 focus:outline-none focus:border-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition shadow">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-900">
+        <p>&copy; 2026 Rohit Yadav. All rights reserved.</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const siteNav = document.getElementById('site-nav');
+        menuToggle.addEventListener('click', () => {
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+            menuToggle.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
+            siteNav.classList.toggle('hidden', isExpanded);
+        });
+        siteNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+            siteNav.classList.add('hidden');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        }));
+    </script>
+</body>
+</html>
